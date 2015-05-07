@@ -66,6 +66,11 @@ body, html {
     div p {
             color: peachpuff;
             font-size: 2em;
-            margin: 1em
+            margin: 1em;
+            position: relative;
             
         }
+p > cite {text-align: right; display: inline-block; width: 100%; font-size: .5em; color: #eee; }
+p > cite::before {content:'('}
+p > cite::after {content:')'}
+

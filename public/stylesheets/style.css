@@ -5,7 +5,7 @@ body, html {
     }
     h1 { text-align: center; }
 	
-	main, section {
+	section {
         background:#f1f1f1; 
         border:1px solid #333; 
         display:-webkit-flex; 
@@ -13,10 +13,7 @@ body, html {
         align-items: stretch; -webkit-align-items: stretch;
         justify-content: center; -webkit-justify-content: center;
     }
-	main {
-        height: auto; 
-        flex-direction: column;  -webkit-flex-direction: column;
-    }
+	
 	section {
         background:#ccc; 
         width: auto; 

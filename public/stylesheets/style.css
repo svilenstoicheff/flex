@@ -3,24 +3,23 @@ body, html {
         font-family: Verdana, sans-serif;
         font-size: 16px;
     }
-    h1 { text-align:center; }
+    h1 { text-align: center; }
 	
 	main, section {
         background:#f1f1f1; 
         border:1px solid #333; 
         display:-webkit-flex; 
         display: flex;
-        align-items: stretch;
-        justify-content: center;
+        align-items: stretch; -webkit-align-items: stretch;
+        justify-content: center; -webkit-justify-content: center;
     }
 	main {
         height: auto; 
-        flex-direction: column; 
-        -webkit-flex-direction: column;
+        flex-direction: column;  -webkit-flex-direction: column;
     }
 	section {
         background:#ccc; 
-        width:auto; 
+        width: auto; 
         height: auto; 
         min-height: 8em; 
         margin: 1em; 
@@ -28,10 +27,9 @@ body, html {
 
 
 	section.column {
-        flex-direction: column; 
-        align-items: center;
-        justify-content: center;
-        -webkit-flex-direction:column;
+        flex-direction: column; -webkit-flex-direction: column;
+        align-items: center; -webkit-align-items: center; 
+        justify-content: center; -webkit-justify-content: center; 
     }
 	section.column div {
         width:98%; 
@@ -42,12 +40,9 @@ body, html {
     } 
     
     section.row {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: flex-start;
-        -webkit-flex-direction: row;
-        -webkit-flex-wrap: wrap; 
-        -webkit-justify-content: flex-start;      
+        flex-direction: row; -webkit-flex-direction: row;
+        flex-wrap: wrap; -webkit-flex-wrap: wrap; 
+        justify-content: flex-start; -webkit-justify-content: flex-start;      
     }
 	
     section.row div {
@@ -57,17 +52,12 @@ body, html {
         background-color: #666;
     }
 	
-
-
-
-
     section > div {
         border: 1px solid #999; 
         margin: 1em; 
         position: relative; 
-        flex-basis: 22%;
+        flex-basis: 22%; -webkit-flex-basis:22%;
         min-width: 250px;
-        -webkit-flex-basis:22%;
         background:#999;
     }
 	div span {
@@ -84,7 +74,6 @@ body, html {
             font-size: 2em;
             margin: 1em;
             position: relative;
-            
         }
 p > cite {text-align: right; display: inline-block; width: 100%; font-size: .5em; color: #eee; }
 p > cite::before {content:'('}

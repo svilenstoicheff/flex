@@ -30,9 +30,10 @@ body, html {
         flex-direction: column; -webkit-flex-direction: column;
         align-items: center; -webkit-align-items: center; 
         justify-content: center; -webkit-justify-content: center; 
+        height: 48em; /* TO-DO: figure this out; this is a hack for Safari and IE10 */
     }
 	section.column div {
-        width:98%; 
+        width:98%;  
         height:20%; 
         background-color: #333;
         /*min-height: 6em; 

@@ -19,4 +19,8 @@
     
     .flex-item-col-4 { 
         flex-basis: 22%; /* takes into account margins and paddings, can't really be 25% */
+        
+        /* failover rules for old IEs, don't affect the flex display in any way */
+        width: 22%; 
+        float: left;
     }

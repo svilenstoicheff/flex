@@ -5,5 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.get('/template', function(req, res, next) {
+  res.render('template', { title: 'Flex-box template' });
+});
 
 module.exports = router;

@@ -11,5 +11,8 @@ router.get('/template', function(req, res, next) {
 router.get('/grid', function(req, res, next) {
   res.render('grid', { title: 'Grid' });
 });
+router.get('/grid-flex', function(req, res, next) {
+  res.render('grid-flex', { title: 'Grid' });
+});
 
 module.exports = router;

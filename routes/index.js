@@ -12,7 +12,10 @@ router.get('/grid', function(req, res, next) {
   res.render('grid', { title: 'Grid' });
 });
 router.get('/grid-flex', function(req, res, next) {
-  res.render('grid-flex', { title: 'Grid' });
+  res.render('grid-flex', { title: 'Grid - flexbox' });
+});
+router.get('/grid-table', function(req, res, next) {
+  res.render('grid-table', { title: 'Grid - table' });
 });
 
 module.exports = router;

@@ -17,8 +17,8 @@ router.get('/grid-flex', function(req, res, next) {
 router.get('/grid-table', function(req, res, next) {
   res.render('grid-table', { title: 'Grid - table' });
 });
-router.get('/floats', function(req, res, next) {
-  res.render('floats', { title: 'Layout with floats' });
+router.get('/positioning', function(req, res, next) {
+  res.render('positioning', { title: 'Layout with floats' });
 });
 
 module.exports = router;

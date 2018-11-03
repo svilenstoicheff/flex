@@ -24,3 +24,11 @@
         width: 22%; 
         float: left;
     }
+    
+    .flex-item-col-75 {
+        flex-basis: 75%;
+    }
+
+    .flex-item-col-25 {
+        flex-basis: 25%;
+    }

@@ -1,0 +1,15 @@
+main.flex {
+    height:100%;
+}
+
+header, footer {
+    height: 16%;
+}
+
+article.flex-container {
+    height:68%;
+    align-items: stretch;
+}
+.flex-item-row {
+    width: `100%;
+}

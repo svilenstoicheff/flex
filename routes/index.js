@@ -20,5 +20,8 @@ router.get('/grid-table', function(req, res, next) {
 router.get('/positioning', function(req, res, next) {
   res.render('positioning', { title: 'Layout with floats' });
 });
+router.get('/grid-minimum', function(req, res, next) {
+  res.render('grid-minimum', { title: 'Layout with floats' });
+});
 
 module.exports = router;

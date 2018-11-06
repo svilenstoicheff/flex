@@ -1,9 +1,12 @@
 main.flex {
     height:100%;
+    background: #333;
 }
 
 header, footer {
     height: 16%;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, .5);
 }
 
 article.flex-container {
@@ -11,5 +14,66 @@ article.flex-container {
     align-items: stretch;
 }
 .flex-item-row {
-    width: `100%;
+    width: 100%;
+}
+
+section.flex-item-col-75 {
+    background: #eee;
+    border-width: .5em 0;
+    border-style: solid;
+    border-color: #333;
+    padding-bottom: 1em;
+}
+
+aside.flex-item-col-25 {
+    background-color: #ddd;
+    border-width: .5em 0;
+    border-style: solid;
+    border-color: #333;
+    padding-bottom: 1em;
+}
+
+aside div {
+    width: 100%;
+    height: 100%;
+    border-left: .5em solid #333;
+    padding-top: 1em;
+}
+p, cite {
+    padding: 0 .5em;
+}
+
+.flex p {
+    font-size: 120%;
+    font-weight: 700;
+    margin: 1em 0 .5em;
+}
+
+aside div p {
+    margin-top: 0;  
+}
+
+@media screen and (max-width: 440px) {
+    body {
+        height: unset;
+    }
+    main.flex {
+        flex-flow: wrap;
+    }
+    article.flex-container {
+        flex-direction: column;
+        height: 100%;
+
+    }
+    aside.flex-item-col-25, aside div, section.flex-item-col-75 {
+        border: 0;
+    }
+    section.flex-item-col-75 {
+        border-top: .5em solid #333;
+        border-bottom: .5em solid #333;
+    }
+    aside.flex-item-col-25 {
+        border-bottom: .5em solid #333;
+    }
+
 }

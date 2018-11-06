@@ -20,10 +20,10 @@ section {
     position: absolute;
     top: 0;
     left:0;
-    width: 75%; 
+    width: 70%; 
     bottom:0;
     background: #eee;
-    padding-right: 3em;
+    padding-right: 4em;
     padding-left: 1em;
     border-width: .5em 0;
     border-style: solid;
@@ -57,5 +57,11 @@ p {
         width: auto;
         padding: 1em;
         border: 0;
+    }
+    header {
+        border-bottom: .5em solid #333;
+    }
+    footer, aside {
+        border-top: .5em solid #333;
     }
 }

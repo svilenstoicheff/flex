@@ -1,7 +1,10 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* grid-gap: .5em; */
     height: 100%;
+    background: #333;
+    /* grid-template-columns: 1fr 1fr 2fr; */
 }
 div {
     width: 100%;
@@ -9,5 +12,6 @@ div {
     border: 1px solid #333;
     text-indent: 1em;
     line-height: 3em;
+    background: #eee;
 }
 

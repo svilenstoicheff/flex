@@ -3,6 +3,9 @@
     grid-template-rows: 1fr 4fr 1fr;
     grid-template-columns: 3fr 1fr;
     grid-gap: .5em;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 4fr 1fr;
+    -ms-grid-columns: 3fr 1fr;
     background: #333333;
     height: 100%;
     overflow: scroll;
@@ -11,16 +14,25 @@
 header, footer {
     grid-column-start: 1;
     grid-column-end: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     background-color: rgba(255, 255, 255, .5);
     padding: 1em;
 }
 
+footer {
+    -ms-grid-row: 3;
+}
+
 .grid article {
+    -ms-grid-row: 2;
     background: #eeeeee;
     padding: 1em;
 }
 
 aside {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
     background-color: #dddddd;
     padding: 1em;
 }

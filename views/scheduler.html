@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+    body {
+        font-family: 'Arial, Helvetica', sans-serif;
+        padding: 1rem;;
+    }
+
+    table {
+        width: 85%;
+        border: 1px solid #333;
+        border-collapse: collapse;
+    }    
+
+    th, td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+        padding: .7rem .5rem;
+    }
+</style>
+    
+</head>
+
+<body>
+
+    <script>
+        function makeSchedule() {
+            const days = ['Tuedsday', 'Wednesday', 'Thursday'];
+            let people = ["Adam", "Al", "Colton", "Duard", "Hailey", "Izabela", "Jack", "Jesse", "Kevin", "Maggie", "Mike", "Nikki", "Parker", "Ric", "Rob", "Ryan", "Sally", "Steven", "Svilen", "Trent", "Vinesh"];
+            let shuffled = people.map((a) => ({ sort: Math.random(), value: a })).sort((a, b) => a.sort - b.sort).map((a) => a.value);
+
+            let shuffledDoubled = shuffled.concat(shuffled);
+
+            let dayOne = shuffledDoubled.slice(0, 14);
+            let dayTwo = shuffledDoubled.slice(14, 28);
+            let dayThree = shuffledDoubled.slice(28, 42);
+            let dailySchedule = [dayOne, dayTwo, dayThree];
+
+            let schedule = new Map();
+            days.forEach((day, idx) => {
+                schedule.set(day, dailySchedule[idx]);
+            });
+
+            let myTable = document.createElement('table');
+            schedule.forEach((value, key) => {
+                let row = document.createElement('tr');
+                let heading = document.createElement('th');
+                heading.innerHTML = key;
+                row.appendChild(heading);
+                value.sort().forEach(item => {
+                    let cell = document.createElement('td');
+                    cell.innerHTML = item;
+                    row.appendChild(cell);
+                })
+                myTable.appendChild(row);
+            });
+
+            document.body.appendChild(myTable);
+
+        }
+
+        for (let i = 1; i <= 4; i++) {
+            let header = document.createElement('h2');
+            header.innerHTML = `Week ${i}`;
+            document.body.appendChild(header);
+            makeSchedule();
+        } 
+
+    </script>
+</body>
+
+</html>

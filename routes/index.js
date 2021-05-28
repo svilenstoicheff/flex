@@ -23,5 +23,10 @@ router.get('/positioning', function(req, res, next) {
 router.get('/grid-minimum', function(req, res, next) {
   res.render('grid-minimum', { title: 'Layout with floats' });
 });
+router.get('/scheduler', function(req, res, next) {
+  res.render('scheduler', { title: 'Office Schedule' });
+});
+
+
 
 module.exports = router;

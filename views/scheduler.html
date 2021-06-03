@@ -43,14 +43,14 @@
                 let schedule = new Map();
 
                 const days = ['Tuesday', 'Wednesday', 'Thursday'];
-                let people = ["Adam", "Al", "Colton", "Duard", "Hailey", "Izabela", "Jack", "Jesse", "Kevin", "Maggie", "Mike", "Nikki", "Parker", "Ric", "Rob", "Ryan", "Caitlin", "Steven", "Svilen", "Trent", "Vinesh"];
+                let people = ["Adam", "Al", "Colton", "Duard", "Hailey", "Izabela", "Jesse", "Kevin", "Maggie", "Mike", "Nikki", "Parker", "Ric", "Rob", "Ryan", "Caitlin", "Steven", "Svilen", "Vinesh"];
                 let shuffled = people.map((a) => ({ sort: Math.random(), value: a })).sort((a, b) => a.sort - b.sort).map((a) => a.value);
 
                 let shuffledDoubled = shuffled.concat(shuffled);
 
-                let dayOne = shuffledDoubled.slice(0, 14);
-                let dayTwo = shuffledDoubled.slice(14, 28);
-                let dayThree = shuffledDoubled.slice(28, 42);
+                let dayOne = shuffledDoubled.slice(0, 13);
+                let dayTwo = shuffledDoubled.slice(13, 26);
+                let dayThree = shuffledDoubled.slice(26, 40);
                 let dailySchedule = [dayOne, dayTwo, dayThree];
 
                 days.forEach((day, idx) => {
